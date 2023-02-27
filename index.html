@@ -1,0 +1,36 @@
+oops concept 
+
+Write a “person” class to hold all the details.
+
+class person{
+    constructor(name,cls,age,section){
+    this.name=name;
+    this.cls=cls;
+    this.age=age;
+    this.section=section;
+  }
+    }
+    var c1=new person("Jothiees","10th std",17 ,"B ");
+    console.log(c1.name);
+	console.log(c1.cls);
+    console.log(c1.age);
+    console.log(c1.section);
+
+    write a class to calculate the uber price?
+
+    class UberPriceCalculator {
+        constructor(prices) {
+            this.prices = prices;
+        }
+    
+        calculate(distance) {
+            return this.prices.reduce((total, price) => {
+                if (distance > price.distance) {
+                    total += (distance - price.distance) * price.price_per_km;
+                    distance = price.distance;
+                }
+    
+                return total;
+            }, 0);
+        }
+    }
